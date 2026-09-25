@@ -1,0 +1,20 @@
+{
+    "name": "Ubuntu25.04 with GCC15",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "remoteUser": "dev",
+    "postStartCommand": "sudo chown -R dev:dev /workspaces/${localWorkspaceFolderBasename}",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "llvm-vs-code-extensions.vscode-clangd",
+          "vadimcn.vscode-lldb",
+          "twxs.cmake",
+          "ms-vscode.cmake-tools"
+        ]
+      }
+    }
+  }
